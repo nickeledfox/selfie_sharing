@@ -4,9 +4,9 @@ from kivy.lang import Builder
 
 Builder.load_file('uix.kv')
 
-class FirstScreen(Screen):
+class TopScreen(Screen):
     def search_image(self):
-        pass
+        self.manager.current_screen.ids.img.source = 'img/murcat.png'
 
 class RootWidget(ScreenManager):
     pass

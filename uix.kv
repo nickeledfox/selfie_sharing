@@ -1,13 +1,19 @@
-<FirstScreen>:
+<TopScreen>:
     GridLayout:
         cols: 1
+        padding: 50
+        spacing: 50
         Image:
-            source: 'img/murcar.png'
+            id: img
+            size_hint_y: 0.8
         TextInput:
+            size_hint_y: 0.08
         Button:
             text: 'Search image'
+            size_hint_y: 0.12
+            on_press: root.search_image()
 
 <RootWidget>
-    FirstScreen
-        id: first_screen
-        name: 'first_screen'
+    TopScreen
+        id: top_screen
+        name: 'top_screen'
