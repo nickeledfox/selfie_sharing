@@ -1,19 +1,15 @@
-<TopScreen>:
+<CameraScreen>:
     GridLayout:
         cols: 1
-        padding: 50
-        spacing: 50
-        Image:
-            id: img
-            size_hint_y: 0.8
-        TextInput:
-            size_hint_y: 0.08
+        Camera:
+            resolution: (640,480)
         Button:
-            text: 'Search image'
-            size_hint_y: 0.12
-            on_press: root.search_image()
+            text: 'Start Camera'
+        Button:
+            text: 'Capture'
+
 
 <RootWidget>
-    TopScreen
-        id: top_screen
-        name: 'top_screen'
+    CameraScreen
+        id: camera_screen
+        name: 'camera_screen'

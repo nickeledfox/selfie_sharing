@@ -1,12 +1,23 @@
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
+from sharing import Sharing
 
 Builder.load_file('uix.kv')
 
-class TopScreen(Screen):
-    def search_image(self):
-        self.manager.current_screen.ids.img.source = 'img/murcat.png'
+class CameraScreen(Screen):
+    def start(self):
+        pass
+
+    def stop(self):
+        pass
+
+    def capture(self):
+        pass
+
+
+class ImageScreen:
+    pass
 
 class RootWidget(ScreenManager):
     pass
