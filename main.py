@@ -20,11 +20,12 @@ class CameraScreen(Screen):
 
     def capture(self):
         capture_time = time.strftime('%H.%M.%S-%Y:%m:%d')
-        file_name = capture_time + '.png'
-        self.ids.camera.export_to_png(file_name)
+        pictures_path = f'pictures/{capture_time}.png'
+        self.ids.camera.export_to_png(pictures_path)
+        self.manager.current = 'image_screen'
 
 
-class ImageScreen:
+class ImageScreen(Screen):
     pass
 
 class RootWidget(ScreenManager):
