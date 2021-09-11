@@ -2,11 +2,16 @@
     GridLayout:
         cols: 1
         Camera:
-            resolution: (640,480)
+            id: camera
+            resolution: (840, 500)
+            play: False
         Button:
-            text: 'Start Camera'
+            id: camera_btn
+            text: 'Play'
+            on_press: root.start() if root.ids.camera.play == False else root.stop()
         Button:
             text: 'Capture'
+            on_press: root.capture()
 
 
 <RootWidget>
