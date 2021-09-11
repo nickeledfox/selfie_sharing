@@ -18,9 +18,12 @@
     GridLayout:
         cols: 1
         Image:
+            id: picture
         Button:
             text: 'Create a link to share the picture'
+            on_press: root.create_link()
         Label:
+            id: link
             text: ''
         GridLayout:
             cols: 2
