@@ -16,6 +16,7 @@ class CameraScreen(Screen):
 
     def start(self):
         # Run camera
+        self.ids.camera.opacity = 1
         self.ids.camera.play = True
         self.ids.camera_btn.text = 'Stop'
         self.ids.camera.texture =\
@@ -23,6 +24,7 @@ class CameraScreen(Screen):
 
     def stop(self):
         self.ids.camera.play = False
+        self.ids.camera.opacity = 0
         self.ids.camera_btn.text = 'Play'
         self.ids.camera.texture = None
 

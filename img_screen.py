@@ -1,7 +1,7 @@
 import webbrowser
-
 from picture_sharer import FileSharer
 
+from kivy.app import App
 from kivy.core.clipboard import Clipboard
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
@@ -13,7 +13,6 @@ class ImageScreen(Screen):
 
     def create_link(self):
         # Generates filestack link
-        # App imported in main
         picture_path = App.get_running_app()\
             .root.ids.camera_screen.pictures_path
         file_sharer = FileSharer(filepath=picture_path)
